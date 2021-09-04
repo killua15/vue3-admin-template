@@ -13,7 +13,7 @@ const constantRoutes = [
         name: 'Dashboard',
         component: () =>
           import(/* webpackChunkName: "dashboard" */ '@/views/dashboard/index'),
-        meta: { title: 'Dashboard', icon: 'dashboard' },
+        meta: { title: 'Inicio', icon: 'dashboard' },
       },
     ],
   },
@@ -22,8 +22,8 @@ const constantRoutes = [
     path: '/example',
     component: Layout,
     redirect: '/example/table',
-    name: 'Example',
-    meta: { title: 'Example', icon: 'el-icon-s-help' },
+    name: 'Systems',
+    meta: { title: 'Mis Tiendas', icon: 'el-icon-s-help' },
     children: [
       {
         path: 'table',
@@ -48,10 +48,10 @@ const constantRoutes = [
     children: [
       {
         path: 'index',
-        name: 'Form',
+        name: 'Departments',
         component: () =>
           import(/* webpackChunkName: "form" */ '@/views/form/index'),
-        meta: { title: 'Form', icon: 'form' },
+        meta: { title: 'Departamentos', icon: 'form' },
       },
     ],
   },
@@ -61,12 +61,12 @@ const constantRoutes = [
     children: [
       {
         path: 'index',
-        name: 'Tailwindcss',
+        name: 'Categories',
         component: () =>
           import(
             /* webpackChunkName: "tailwindcss" */ '@/views/tailwindcss/index'
           ),
-        meta: { title: 'Tailwindcss', icon: 'el-icon-magic-stick' },
+        meta: { title: 'Categorias', icon: 'el-icon-magic-stick' },
       },
     ],
   },
@@ -75,87 +75,11 @@ const constantRoutes = [
     path: '/nested',
     component: Layout,
     redirect: '/nested/menu1',
-    name: 'Nested',
+    name: 'Product',
     meta: {
-      title: 'Nested',
+      title: 'Productos',
       icon: 'nested',
-    },
-    children: [
-      {
-        path: 'menu1',
-        component: () =>
-          import(/* webpackChunkName: "nested" */ '@/views/nested/menu1/index'), // Parent router-view
-        name: 'Menu1',
-        meta: { title: 'Menu1' },
-        children: [
-          {
-            path: 'menu1-1',
-            component: () =>
-              import(
-                /* webpackChunkName: "nested" */ '@/views/nested/menu1/menu1-1'
-              ),
-            name: 'Menu1-1',
-            meta: { title: 'Menu1-1' },
-          },
-          {
-            path: 'menu1-2',
-            component: () =>
-              import(
-                /* webpackChunkName: "nested" */ '@/views/nested/menu1/menu1-2'
-              ),
-            name: 'Menu1-2',
-            meta: { title: 'Menu1-2' },
-            children: [
-              {
-                path: 'menu1-2-1',
-                component: () =>
-                  import(
-                    /* webpackChunkName: "nested" */ '@/views/nested/menu1/menu1-2/menu1-2-1'
-                  ),
-                name: 'Menu1-2-1',
-                meta: { title: 'Menu1-2-1' },
-              },
-              {
-                path: 'menu1-2-2',
-                component: () =>
-                  import(
-                    /* webpackChunkName: "nested" */ '@/views/nested/menu1/menu1-2/menu1-2-2'
-                  ),
-                name: 'Menu1-2-2',
-                meta: { title: 'Menu1-2-2' },
-              },
-            ],
-          },
-          {
-            path: 'menu1-3',
-            component: () =>
-              import(
-                /* webpackChunkName: "nested" */ '@/views/nested/menu1/menu1-3'
-              ),
-            name: 'Menu1-3',
-            meta: { title: 'Menu1-3' },
-          },
-        ],
-      },
-      {
-        path: 'menu2',
-        component: () =>
-          import(/* webpackChunkName: "nested" */ '@/views/nested/menu2/index'),
-        name: 'Menu2',
-        meta: { title: 'menu2' },
-      },
-    ],
-  },
-
-  {
-    path: '/external-link',
-    component: Layout,
-    children: [
-      {
-        path: 'https://github.com/HaitaoWang555/vue3-admin-template',
-        meta: { title: 'External Link', icon: 'link' },
-      },
-    ],
+    }
   },
   {
     path: '/login',

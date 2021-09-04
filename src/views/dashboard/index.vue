@@ -9,7 +9,7 @@ import { computed } from 'vue'
 import { useStore } from 'vuex'
 
 export default {
-  name: 'Dashboard',
+  name: 'Home',
   setup() {
     const store = useStore()
 
